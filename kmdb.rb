@@ -200,6 +200,49 @@ role10.person_id = person9.id
 role10.character_name = "Rachel Dawes"
 role10.save
 
+# The Dark Knight Rises
+
+person10 = Person.new
+person10.name = "Tom Hardy" #10
+person10.save
+
+person11 = Person.new
+person11.name = "Joseph Gordon-Levitt" #11
+person11.save
+
+person12 = Person.new
+person12.name = "Anne Hathaway" #12
+person12.save
+
+role11 = Role.new
+role11.movie_id = movie3.id
+role11.person_id = person2.id
+role11.character_name = "Bruce Wayne"
+role11.save
+
+role12 = Role.new
+role12.movie_id = movie3.id
+role12.person_id = person6.id
+role12.character_name = "Commissioner Gordon"
+role12.save
+
+role13 = Role.new
+role13.movie_id = movie3.id
+role13.person_id = person10.id
+role13.character_name = "Bane"
+role13.save
+
+role14 = Role.new
+role14.movie_id = movie3.id
+role14.person_id = person11.id
+role14.character_name = "John Blake"
+role14.save
+
+role15 = Role.new
+role15.movie_id = movie3.id
+role15.person_id = person12.id
+role15.character_name = "Selina Kyle"
+role15.save
 
 # Insert data into your database that reflects the sample data shown above
 # Do not use hard-coded foreign key IDs.
