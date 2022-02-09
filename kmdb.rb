@@ -93,15 +93,68 @@ movie2 = Movie.new
 movie2.title = "The Dark Knight"
 movie2.year_released = 2008
 movie2.rated = "PG-13"
-movie2.person_id = 1
+movie2.person_id = person1.id
 movie2.save
 
 movie3 = Movie.new
 movie3.title = "The Dark Knight"
 movie3.year_released = 2008
 movie3.rated = "PG-13"
-movie3.person_id = 1
+movie3.person_id = person1.id
 movie3.save
+
+
+# Batman Begins
+
+person2 = Person.new
+person2.name = "Christian Bale" #2
+person2.save
+
+person3 = Person.new
+person3.name = "Michael Caine" #3
+person3.save
+
+person4 = Person.new
+person4.name = "Liam Neeson" #4
+person4.save
+
+person5 = Person.new
+person5.name = "Katie Holmes" #5
+person5.save
+
+person6 = Person.new
+person6.name = "Gary Oldman" #6
+person6.save
+
+role1 = Role.new
+role1.movie_id = 1
+role1.person_id = 2
+role1.character_name = "Bruce Wayne"
+role1.save
+
+role2 = Role.new
+role2.movie_id = 1
+role2.person_id = 3
+role2.character_name = "Alfred"
+role2.save
+
+role3 = Role.new
+role3.movie_id = 1
+role3.person_id = 4
+role3.character_name = "Ra's Al Ghul"
+role3.save
+
+role4 = Role.new
+role4.movie_id = 1
+role4.person_id = 5
+role4.character_name = "Rachel Dawes"
+role4.save
+
+role5 = Role.new
+role5.movie_id = 1
+role5.person_id = 6
+role5.character_name = "Commissioner Gordon"
+role5.save
 
 
 # Insert data into your database that reflects the sample data shown above
