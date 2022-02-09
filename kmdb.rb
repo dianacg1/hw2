@@ -293,8 +293,7 @@ for movie in Movie.all
     puts movie.title
     puts movie.year_released
     puts movie.rated 
-    person1_id = person1.id
-    persons = Person.where(id: person1_id)
+    persons = Person.where(id: movie.person_id)
     for person in persons
         puts "#{person.name}"
     end
@@ -320,43 +319,18 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie
 # TODO!
-=begin
-for movie in Movie.all
-    puts movie.title
-    roles = role.character_name
-    for role in roles
-        puts "#{role.character_name}"
-    end
-    puts ""
-end
-
-for company in Company.all
-    puts company.name
-    contacts = company.contacts
-    for contact in contacts
-        puts "#{contact.first_name} #{contact.last_name} - #{contact.email}"
-    end
-    puts ""
-end
 
 
 for movie in Movie.all
     puts movie.title
+    movies = Role.where(movie_id: movie.id)
     puts ""
-    persons = movie.person_id
-    for persons in Person.all
-        puts "#{persons.name}"
+    for roles in movies
+        puts "#{roles.character_name} is interpreted by: "
+        persons = Person.where(id: roles.person_id)
+        for person in persons
+            puts "#{person.name}"
+        end
     end
     puts "_____"
-end
-=end
-
-
-# BETTER
-apple_id = apple.id
-contacts = Contact.where(company_id: apple_id)
-
-p "Contacts at Apple: #{contacts.count}"
-for contact in contacts
-    p "#{contact.first_name} #{contact.last_name}"
 end
