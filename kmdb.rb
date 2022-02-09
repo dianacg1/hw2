@@ -127,34 +127,78 @@ person6.name = "Gary Oldman" #6
 person6.save
 
 role1 = Role.new
-role1.movie_id = 1
-role1.person_id = 2
+role1.movie_id = movie1.id
+role1.person_id = person2.id
 role1.character_name = "Bruce Wayne"
 role1.save
 
 role2 = Role.new
-role2.movie_id = 1
-role2.person_id = 3
+role2.movie_id = movie1.id
+role2.person_id = person3.id
 role2.character_name = "Alfred"
 role2.save
 
 role3 = Role.new
-role3.movie_id = 1
-role3.person_id = 4
+role3.movie_id = movie1.id
+role3.person_id = person4.id
 role3.character_name = "Ra's Al Ghul"
 role3.save
 
 role4 = Role.new
-role4.movie_id = 1
-role4.person_id = 5
+role4.movie_id = movie1.id
+role4.person_id = person5.id
 role4.character_name = "Rachel Dawes"
 role4.save
 
 role5 = Role.new
-role5.movie_id = 1
-role5.person_id = 6
+role5.movie_id = movie1.id
+role5.person_id = person6.id
 role5.character_name = "Commissioner Gordon"
 role5.save
+
+# The Dark Knight
+
+person7 = Person.new
+person7.name = "Heath Ledger" #7
+person7.save
+
+person8 = Person.new
+person8.name = "Aaron Eckhart" #8
+person8.save
+
+person9 = Person.new
+person9.name = "Maggie Gyllenhaal" #9
+person9.save
+
+role6 = Role.new
+role6.movie_id = movie2.id
+role6.person_id = person2.id
+role6.character_name = "Bruce Wayne"
+role6.save
+
+role7 = Role.new
+role7.movie_id = movie2.id
+role7.person_id = person7.id
+role7.character_name = "Joker"
+role7.save
+
+role8 = Role.new
+role8.movie_id = movie2.id
+role8.person_id = person8.id
+role8.character_name = "Harvey Dent"
+role8.save
+
+role9 = Role.new
+role9.movie_id = movie2.id
+role9.person_id = person3.id
+role9.character_name = "Alfred"
+role9.save
+
+role10 = Role.new
+role10.movie_id = movie2.id
+role10.person_id = person9.id
+role10.character_name = "Rachel Dawes"
+role10.save
 
 
 # Insert data into your database that reflects the sample data shown above
