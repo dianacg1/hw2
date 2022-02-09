@@ -76,7 +76,38 @@ Role.destroy_all
 # Generate models and tables, according to the domain model
 # TODO!
 
-Movie.all.count
+#  class CreateMovies < ActiveRecord::Migration[7.0]
+#    def change
+#      create_table :movies do |t|
+#       t.string :title
+#        t.integer :year_released
+#        t.string :rated
+#        t.integer :person_id
+#      end
+#    end
+#  end
+
+#    class CreatePeople < ActiveRecord::Migration[7.0]
+#      def change
+#        create_table :people do |t|
+#          t.string :name
+#        end
+#      end
+#    end
+  
+#  class CreateRoles < ActiveRecord::Migration[7.0]
+#    def change
+#      create_table :people do |t|
+#        t.integer :movie_id
+#        t.integer :person_id
+#        t.string :character_name
+#      end
+#    end
+#  end
+
+# Insert data into your database that reflects the sample data shown above
+# Do not use hard-coded foreign key IDs.
+# TODO!
 
 person1 = Person.new
 person1.name = "Christopher Nolan" #1
@@ -102,7 +133,6 @@ movie3.year_released = 2008
 movie3.rated = "PG-13"
 movie3.person_id = person1.id
 movie3.save
-
 
 # Batman Begins
 
@@ -244,9 +274,12 @@ role15.person_id = person12.id
 role15.character_name = "Selina Kyle"
 role15.save
 
-# Insert data into your database that reflects the sample data shown above
-# Do not use hard-coded foreign key IDs.
-# TODO!
+puts "There are #{Movie.all.count} movies"
+puts "There are #{Person.all.count} people"
+puts "There are #{Role.all.count} roles"
+puts ""
+puts ""
+
 
 # Prints a header for the movies output
 puts "Movies"
@@ -255,6 +288,14 @@ puts ""
 
 # Query the movies data and loop through the results to display the movies output
 # TODO!
+
+for movie in Movie.all
+    puts movie.title
+    puts movie.year_released
+    puts movie.rated
+    puts ""
+end
+
 
 # Prints a header for the cast output
 puts ""
